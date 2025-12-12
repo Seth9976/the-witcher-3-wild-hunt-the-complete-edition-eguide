@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+<title>Tedd Deireadh (Atlas) - The Witcher 3: Wild Hunt The Complete Edition eGuide | Prima Games</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="description" content=""/>
+<link rel="icon" type="image/png" href="../../static/favicon.png">
+<link rel="shortcut icon" type="image/x-icon" href="../../static/favicon.ico">
+<link rel="stylesheet" href="../../static/leaflet/leaflet.css"/>
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="../../static/leaflet/leaflet.ie.css" />
+<![endif]-->
+<style>.leaflet-container-default{min-height:300px;}</style>
+<link rel="stylesheet" type="text/css" href="../../static/css/maps/maps.css"/>
+<link rel="stylesheet" type="text/css" href="../../static/css/maps/Control.PanelLayers.Custom.css"/>
+<link rel="stylesheet" type="text/css" href="../../static/css/maps/Control.PanelLayers.css"/>
+<link rel="stylesheet" type="text/css" href="../../static/css/maps/Control.MiniMap.css"/>
+<link rel="stylesheet" type="text/css" href="../../static/js/maps/leaflet-draw/leaflet.draw.css"/>
+<!--[if IE 8]><script src="../../static/leaflet/eventlistener.ie8.js"></script><!--<![endif]-->
+<!--[if lt IE 8]><script src="../../static/leaflet/eventlistener.ie6-7.js"></script><!--<![endif]-->
+<script src="../../static/leaflet/leaflet.js" type="text/javascript"></script>
+<script src="../../static/leaflet/leaflet.extras.js" type="text/javascript"></script>
+<script type="text/javascript">
+L.Control.ResetView.TITLE = "Reset view";
+L.Control.ResetView.ICON = "url(../../static/leaflet/images/reset-view.png)";
+</script>
+</head>
+<body class="">
+<div id="map" class="leaflet-container-default"></div>
+<script type="text/javascript">
+(function () {
+function loadmap() {
+var djoptions = {"layers": [["Background", "", ""]], "minimap": false, "scale": null, "center": null, "tilesextent": [], "attributionprefix": "Powered by Prima Games", "zoom": null, "maxzoom": 6, "minzoom": 0, "extent": [[-90, -180], [80.53207112232734, 42.01171875]], "resetview": true, "srid": null, "overlays": [], "fitextent": true},
+options = {djoptions: djoptions, initfunc: loadmap,
+globals: false, callback: window.prima_map_init_callback};
+L.Map.djangoMap('map', options);
+}
+var loadevents = ["load"];
+if (loadevents.length === 0) loadmap();
+else if (window.addEventListener) for (var i=0; i<loadevents.length; i++) window.addEventListener(loadevents[i], loadmap, false);
+else if (window.jQuery) jQuery(window).on(loadevents.join(' '), loadmap);
+})();
+</script>
+<script src="../../static/js/vendor/prototype.js"></script>
+<script src="../../static/js/effects.js"></script>
+<script src="../../static/js/vendor/postscribe/postscribe.js"></script>
+<script src="../../static/js/jquery.min.js"></script>
+<script>
+jQuery.noConflict();
+</script>
+<script src="../../static/js/Fastclick.js"></script>
+<script src="../../static/js/vendor/respond.min.js"></script>
+<!--[if lt IE 9]>
+<script>
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+</script>
+<![endif]-->
+<script>document.observe("dom:loaded", function(){var fastclick = new FastClick(document.body);});</script>
+<script src="../../static/js/maps/PrimaMapController.js"></script>
+<script src="../../static/js/maps/Control.PanelLayers.js"></script>
+<script src="../../static/js/maps/Control.MiniMap.js"></script>
+<script src="../../static/js/maps/leaflet-draw/leaflet.draw.js"></script>
+<script type="text/javascript">
+function prima_map_init_callback (map, options) {
+var primaMap = new PrimaMapController({
+'map': map,
+'bookmark': window.location.hash,
+'features': {"crs": {"type": "link", "properties": {"href": "http://spatialreference.org/ref/epsg/4326/", "type": "proj4"}}, "type": "FeatureCollection", "features": [{"geometry": {"type": "Point", "coordinates": [-87.451171875, -4.653079918274038]}, "type": "Feature", "properties": {"type_description": "Expect reasonably valuable (random) items in this type of chest.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/GoodChest.png", "type_name": "Chest (Good)", "has_popup_content": false, "popup_content": "<h1>Chest (Good)</h1>\n\n\n", "group_name": "Chests", "icon_height": 25, "object_type": "point", "group_description": "Gathering valuable items is extremely important during your adventure, and this guide details the (random) quality of the treasure you should expect to find.", "is_map_center": true, "id": 14195, "name": "Chest (Good)"}}, {"geometry": {"type": "Point", "coordinates": [-96.064453125, 7.623886853120036]}, "type": "Feature", "properties": {"type_description": "Expect reasonably valuable (random) items in this type of chest.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/GoodChest.png", "type_name": "Chest (Good)", "has_popup_content": false, "popup_content": "<h1>Chest (Good)</h1>\n\n\n", "group_name": "Chests", "icon_height": 25, "object_type": "point", "group_description": "Gathering valuable items is extremely important during your adventure, and this guide details the (random) quality of the treasure you should expect to find.", "is_map_center": false, "id": 14196, "name": "Chest (Good)"}}, {"geometry": {"type": "Point", "coordinates": [-105.556640625, -51.618016548773696]}, "type": "Feature", "properties": {"type_description": "Expect reasonably valuable (random) items in this type of chest.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/GoodChest.png", "type_name": "Chest (Good)", "has_popup_content": false, "popup_content": "<h1>Chest (Good)</h1>\n\n\n", "group_name": "Chests", "icon_height": 25, "object_type": "point", "group_description": "Gathering valuable items is extremely important during your adventure, and this guide details the (random) quality of the treasure you should expect to find.", "is_map_center": false, "id": 14198, "name": "Chest (Good)"}}, {"geometry": {"type": "Point", "coordinates": [-87.1875, -59.977005492196]}, "type": "Feature", "properties": {"type_description": "Expect reasonably valuable (random) items in this type of chest.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/GoodChest.png", "type_name": "Chest (Good)", "has_popup_content": false, "popup_content": "<h1>Chest (Good)</h1>\n\n\n", "group_name": "Chests", "icon_height": 25, "object_type": "point", "group_description": "Gathering valuable items is extremely important during your adventure, and this guide details the (random) quality of the treasure you should expect to find.", "is_map_center": false, "id": 14199, "name": "Chest (Good)"}}, {"geometry": {"type": "Point", "coordinates": [-85.078125, -75.09563272854379]}, "type": "Feature", "properties": {"type_description": "Expect reasonably valuable (random) items in this type of chest.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/GoodChest.png", "type_name": "Chest (Good)", "has_popup_content": false, "popup_content": "<h1>Chest (Good)</h1>\n\n\n", "group_name": "Chests", "icon_height": 25, "object_type": "point", "group_description": "Gathering valuable items is extremely important during your adventure, and this guide details the (random) quality of the treasure you should expect to find.", "is_map_center": false, "id": 14200, "name": "Chest (Good)"}}, {"geometry": {"type": "Point", "coordinates": [-71.71875, -81.89845141173646]}, "type": "Feature", "properties": {"type_description": "Expect reasonably valuable (random) items in this type of chest.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/GoodChest.png", "type_name": "Chest (Good)", "has_popup_content": false, "popup_content": "<h1>Chest (Good)</h1>\n\n\n", "group_name": "Chests", "icon_height": 25, "object_type": "point", "group_description": "Gathering valuable items is extremely important during your adventure, and this guide details the (random) quality of the treasure you should expect to find.", "is_map_center": false, "id": 14201, "name": "Chest (Good)"}}, {"geometry": {"type": "Point", "coordinates": [-65.91796875, -81.92318632602198]}, "type": "Feature", "properties": {"type_description": "Expect reasonably valuable (random) items in this type of chest.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/GoodChest.png", "type_name": "Chest (Good)", "has_popup_content": false, "popup_content": "<h1>Chest (Good)</h1>\n\n\n", "group_name": "Chests", "icon_height": 25, "object_type": "point", "group_description": "Gathering valuable items is extremely important during your adventure, and this guide details the (random) quality of the treasure you should expect to find.", "is_map_center": false, "id": 14202, "name": "Chest (Good)"}}, {"geometry": {"type": "Point", "coordinates": [-102.568359375, -23.40276490540795]}, "type": "Feature", "properties": {"type_description": "Expect reasonably valuable (random) items in this type of chest.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/GoodChest.png", "type_name": "Chest (Good)", "has_popup_content": false, "popup_content": "<h1>Chest (Good)</h1>\n\n\n", "group_name": "Chests", "icon_height": 25, "object_type": "point", "group_description": "Gathering valuable items is extremely important during your adventure, and this guide details the (random) quality of the treasure you should expect to find.", "is_map_center": false, "id": 14197, "name": "Chest (Good)"}}, {"geometry": {"type": "Point", "coordinates": [-102.568359375, -26.509904531413927]}, "type": "Feature", "properties": {"type_description": "This chest is utilized in a specific quest. The loot itself is not required to complete the quest. Such chests may also be accessible when this quest isn\u2019t active, but it\u2019s usually advisable to find them during a quest that takes you to this location. Check the quest you are on to see if the location is mentioned.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/QuestChest.png", "type_name": "Quest Chest", "has_popup_content": false, "popup_content": "<h1>Quest Chest</h1>\n\n\n", "group_name": "Chests", "icon_height": 25, "object_type": "point", "group_description": "Gathering valuable items is extremely important during your adventure, and this guide details the (random) quality of the treasure you should expect to find.", "is_map_center": false, "id": 14204, "name": "Quest Chest"}}, {"geometry": {"type": "Point", "coordinates": [-112.939453125, 43.32517767999296]}, "type": "Feature", "properties": {"type_description": "This chest is utilized in a specific quest. The loot itself is not required to complete the quest. Such chests may also be accessible when this quest isn\u2019t active, but it\u2019s usually advisable to find them during a quest that takes you to this location. Check the quest you are on to see if the location is mentioned.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/QuestChest.png", "type_name": "Quest Chest", "has_popup_content": false, "popup_content": "<h1>Quest Chest</h1>\n\n\n", "group_name": "Chests", "icon_height": 25, "object_type": "point", "group_description": "Gathering valuable items is extremely important during your adventure, and this guide details the (random) quality of the treasure you should expect to find.", "is_map_center": false, "id": 14205, "name": "Quest Chest"}}, {"geometry": {"type": "Point", "coordinates": [-80.419921875, 74.79890566232942]}, "type": "Feature", "properties": {"type_description": "This chest is utilized in a specific quest. The loot itself is not required to complete the quest. Such chests may also be accessible when this quest isn\u2019t active, but it\u2019s usually advisable to find them during a quest that takes you to this location. Check the quest you are on to see if the location is mentioned.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/QuestChest.png", "type_name": "Quest Chest", "has_popup_content": false, "popup_content": "<h1>Quest Chest</h1>\n\n\n", "group_name": "Chests", "icon_height": 25, "object_type": "point", "group_description": "Gathering valuable items is extremely important during your adventure, and this guide details the (random) quality of the treasure you should expect to find.", "is_map_center": false, "id": 14206, "name": "Quest Chest"}}, {"geometry": {"type": "Point", "coordinates": [-90.087890625, -75.80211845876491]}, "type": "Feature", "properties": {"type_description": "This chest is utilized in a specific quest. The loot itself is not required to complete the quest. Such chests may also be accessible when this quest isn\u2019t active, but it\u2019s usually advisable to find them during a quest that takes you to this location. Check the quest you are on to see if the location is mentioned.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/QuestChest.png", "type_name": "Quest Chest", "has_popup_content": false, "popup_content": "<h1>Quest Chest</h1>\n\n\n", "group_name": "Chests", "icon_height": 25, "object_type": "point", "group_description": "Gathering valuable items is extremely important during your adventure, and this guide details the (random) quality of the treasure you should expect to find.", "is_map_center": false, "id": 14203, "name": "Quest Chest"}}]},
+'baseLayer': L.imageOverlay('../../media/maps/tedd_deireadh.jpg', [[-90, -180], [80.53207112232734, 42.01171875]]),
+'miniMapLayer': L.imageOverlay('../../media/maps/mini_tedd_deireadh.jpg', [[-90, -180], [80.53207112232734, 42.01171875]])
+});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+<title>Dark Valley (Atlas) - The Witcher 3: Wild Hunt The Complete Edition eGuide | Prima Games</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="description" content=""/>
+<link rel="icon" type="image/png" href="../../static/favicon.png">
+<link rel="shortcut icon" type="image/x-icon" href="../../static/favicon.ico">
+<link rel="stylesheet" href="../../static/leaflet/leaflet.css"/>
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="../../static/leaflet/leaflet.ie.css" />
+<![endif]-->
+<style>.leaflet-container-default{min-height:300px;}</style>
+<link rel="stylesheet" type="text/css" href="../../static/css/maps/maps.css"/>
+<link rel="stylesheet" type="text/css" href="../../static/css/maps/Control.PanelLayers.Custom.css"/>
+<link rel="stylesheet" type="text/css" href="../../static/css/maps/Control.PanelLayers.css"/>
+<link rel="stylesheet" type="text/css" href="../../static/css/maps/Control.MiniMap.css"/>
+<link rel="stylesheet" type="text/css" href="../../static/js/maps/leaflet-draw/leaflet.draw.css"/>
+<!--[if IE 8]><script src="../../static/leaflet/eventlistener.ie8.js"></script><!--<![endif]-->
+<!--[if lt IE 8]><script src="../../static/leaflet/eventlistener.ie6-7.js"></script><!--<![endif]-->
+<script src="../../static/leaflet/leaflet.js" type="text/javascript"></script>
+<script src="../../static/leaflet/leaflet.extras.js" type="text/javascript"></script>
+<script type="text/javascript">
+L.Control.ResetView.TITLE = "Reset view";
+L.Control.ResetView.ICON = "url(../../static/leaflet/images/reset-view.png)";
+</script>
+</head>
+<body class="">
+<div id="map" class="leaflet-container-default"></div>
+<script type="text/javascript">
+(function () {
+function loadmap() {
+var djoptions = {"layers": [["Background", "", ""]], "minimap": false, "scale": null, "center": null, "tilesextent": [], "attributionprefix": "Powered by Prima Games", "zoom": null, "maxzoom": 4, "minzoom": 0, "extent": [[-90, -180], [6.140554782450308, -4.21875]], "resetview": true, "srid": null, "overlays": [], "fitextent": true},
+options = {djoptions: djoptions, initfunc: loadmap,
+globals: false, callback: window.prima_map_init_callback};
+L.Map.djangoMap('map', options);
+}
+var loadevents = ["load"];
+if (loadevents.length === 0) loadmap();
+else if (window.addEventListener) for (var i=0; i<loadevents.length; i++) window.addEventListener(loadevents[i], loadmap, false);
+else if (window.jQuery) jQuery(window).on(loadevents.join(' '), loadmap);
+})();
+</script>
+<script src="../../static/js/vendor/prototype.js"></script>
+<script src="../../static/js/effects.js"></script>
+<script src="../../static/js/vendor/postscribe/postscribe.js"></script>
+<script src="../../static/js/jquery.min.js"></script>
+<script>
+jQuery.noConflict();
+</script>
+<script src="../../static/js/Fastclick.js"></script>
+<script src="../../static/js/vendor/respond.min.js"></script>
+<!--[if lt IE 9]>
+<script>
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+</script>
+<![endif]-->
+<script>document.observe("dom:loaded", function(){var fastclick = new FastClick(document.body);});</script>
+<script src="../../static/js/maps/PrimaMapController.js"></script>
+<script src="../../static/js/maps/Control.PanelLayers.js"></script>
+<script src="../../static/js/maps/Control.MiniMap.js"></script>
+<script src="../../static/js/maps/leaflet-draw/leaflet.draw.js"></script>
+<script type="text/javascript">
+function prima_map_init_callback (map, options) {
+var primaMap = new PrimaMapController({
+'map': map,
+'bookmark': window.location.hash,
+'features': {"crs": {"type": "link", "properties": {"href": "http://spatialreference.org/ref/epsg/4326/", "type": "proj4"}}, "type": "FeatureCollection", "features": [{"geometry": {"type": "Point", "coordinates": [-85.341796875, -58.30948884067763]}, "type": "Feature", "properties": {"type_description": "Expect reasonably valuable (random) items in this type of chest.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/GoodChest.png", "type_name": "Chest (Good)", "has_popup_content": false, "popup_content": "<h1>Chest (Good)</h1>\n\n\n", "group_name": "Chests", "icon_height": 25, "object_type": "point", "group_description": "Gathering valuable items is extremely important during your adventure, and this guide details the (random) quality of the treasure you should expect to find.", "is_map_center": true, "id": 14250, "name": "Chest (Good)"}}, {"geometry": {"type": "Point", "coordinates": [-115.224609375, -61.43876749368282]}, "type": "Feature", "properties": {"type_description": "Expect reasonably valuable (random) items in this type of chest.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/GoodChest.png", "type_name": "Chest (Good)", "has_popup_content": false, "popup_content": "<h1>Chest (Good)</h1>\n\n\n", "group_name": "Chests", "icon_height": 25, "object_type": "point", "group_description": "Gathering valuable items is extremely important during your adventure, and this guide details the (random) quality of the treasure you should expect to find.", "is_map_center": false, "id": 14249, "name": "Chest (Good)"}}, {"geometry": {"type": "Point", "coordinates": [-75.146484375, -57.84475099289099]}, "type": "Feature", "properties": {"type_description": "Expect reasonably valuable (random) items in this type of chest.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/GoodChest.png", "type_name": "Chest (Good)", "has_popup_content": false, "popup_content": "<h1>Chest (Good)</h1>\n\n\n", "group_name": "Chests", "icon_height": 25, "object_type": "point", "group_description": "Gathering valuable items is extremely important during your adventure, and this guide details the (random) quality of the treasure you should expect to find.", "is_map_center": false, "id": 14252, "name": "Chest (Good)"}}, {"geometry": {"type": "Point", "coordinates": [-95.361328125, -76.12189296324112]}, "type": "Feature", "properties": {"type_description": "Expect reasonably valuable (random) items in this type of chest.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/GoodChest.png", "type_name": "Chest (Good)", "has_popup_content": false, "popup_content": "<h1>Chest (Good)</h1>\n\n\n", "group_name": "Chests", "icon_height": 25, "object_type": "point", "group_description": "Gathering valuable items is extremely important during your adventure, and this guide details the (random) quality of the treasure you should expect to find.", "is_map_center": false, "id": 14253, "name": "Chest (Good)"}}, {"geometry": {"type": "Point", "coordinates": [-172.35351562499997, -49.8946343957342]}, "type": "Feature", "properties": {"type_description": "Expect reasonably valuable (random) items in this type of chest.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/GoodChest.png", "type_name": "Chest (Good)", "has_popup_content": false, "popup_content": "<h1>Chest (Good)</h1>\n\n\n", "group_name": "Chests", "icon_height": 25, "object_type": "point", "group_description": "Gathering valuable items is extremely important during your adventure, and this guide details the (random) quality of the treasure you should expect to find.", "is_map_center": false, "id": 14255, "name": "Chest (Good)"}}, {"geometry": {"type": "Point", "coordinates": [-80.5078125, -58.26328705248601]}, "type": "Feature", "properties": {"type_description": "Expect reasonably valuable (random) items in this type of chest.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/GoodChest.png", "type_name": "Chest (Good)", "has_popup_content": false, "popup_content": "<h1>Chest (Good)</h1>\n\n\n", "group_name": "Chests", "icon_height": 25, "object_type": "point", "group_description": "Gathering valuable items is extremely important during your adventure, and this guide details the (random) quality of the treasure you should expect to find.", "is_map_center": true, "id": 14251, "name": "Chest (Good)"}}, {"geometry": {"type": "Point", "coordinates": [-150.908203125, -82.30889251821553]}, "type": "Feature", "properties": {"type_description": "An important stone of magic that increases a particular ability. The Sign of the Place of Power is indicated, as well.", "icon_width": 25, "icon_url": "../../media/maps/featuretypes/PlacePower_2.png", "type_name": "Place of Power", "has_popup_content": "<p>Aard</p>", "popup_content": "<h1>Place of Power</h1>\n<p>Aard</p>\n\n", "group_name": "Points of Interest", "icon_height": 25, "object_type": "point", "group_description": "A variety of interesting areas not immediately obvious include the landscapes.", "is_map_center": false, "id": 14257, "name": "Place of Power"}}]},
+'baseLayer': L.imageOverlay('../../media/maps/dark_valley.jpg', [[-90, -180], [6.140554782450308, -4.21875]]),
+'miniMapLayer': L.imageOverlay('../../media/maps/mini_dark_valley.jpg', [[-90, -180], [6.140554782450308, -4.21875]])
+});
+}
+</script>
+</body>
+</html>
