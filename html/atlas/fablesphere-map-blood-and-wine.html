@@ -25,6 +25,21 @@
 L.Control.ResetView.TITLE = "Reset view";
 L.Control.ResetView.ICON = "url(../../static/leaflet/images/reset-view.png)";
 </script>
+
+<link rel="manifest" href="../../manifest.json">
+<meta name="theme-color" content="#8b0000">
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('../../sw.js').then(registration => {
+                console.log('SW registered:', registration);
+            }).catch(error => {
+                console.log('SW registration failed:', error);
+            });
+        });
+    }
+</script>
+
 </head>
 <body class="">
 <div id="map" class="leaflet-container-default"></div>
