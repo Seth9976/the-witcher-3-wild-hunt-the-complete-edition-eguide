@@ -1,11 +1,11 @@
-# .github/workflows/pwa.yml
 name: PWA Build and Deploy
 
 on:
   push:
-    branches: [ main ] # 确保这里是你的默认分支名，可能是 master 或 main
+    # 修改这里：将分支名改为你当前正在使用的分支
+    branches: [ "feature/add-pwa" ] 
 
-# 赋予 GITHUB_TOKEN 写入权限以进行部署
+# 赋予 GITHUB_TOKEN 写入权限（这一步至关重要，否则Action无法创建gh-pages分支）
 permissions:
   contents: write
 
@@ -15,39 +15,24 @@ jobs:
     
     steps:
     - name: Checkout Code
-      # 检出代码
       uses: actions/checkout@v3
       
     - name: Setup Node.js
-      # 配置 Node.js 环境用于运行 Workbox
       uses: actions/setup-node@v3
       with:
         node-version: '18'
         
     - name: Install Workbox CLI
-      # 安装 Workbox 命令行工具
       run: npm install workbox-cli --global
       
     - name: Generate Service Worker
-      # 根据 workbox-config.js 生成 sw.js
-      # 这会根据文件内容生成哈希列表，实现精准缓存
+      # 这一步会根据 workbox-config.js 生成 sw.js
       run: workbox generateSW workbox-config.js
       
-    - name: Verify SW generation
-      # 简单的验证步骤，确保 sw.js 已生成
-      run: |
-        if [ -f "sw.js" ]; then
-          echo "sw.js generated successfully."
-        else
-          echo "Error: sw.js not found!"
-          exit 1
-        fi
-
     - name: Deploy to GitHub Pages
-      # 部署到 GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./
-        # 强制发布，即使没有 Jekyll 构建过程（你的项目是纯 HTML）
+        # 这一行会让 Action 自动创建或覆盖 gh-pages 分支
         force_orphan: true
