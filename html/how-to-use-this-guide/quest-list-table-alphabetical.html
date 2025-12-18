@@ -20,6 +20,21 @@
 <link rel="stylesheet" href="../../static/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="../../static/js/fancybox/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="../../static/js/fancybox/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+
+<link rel="manifest" href="../../manifest.json">
+<meta name="theme-color" content="#8b0000">
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('../../sw.js').then(registration => {
+                console.log('SW registered:', registration);
+            }).catch(error => {
+                console.log('SW registration failed:', error);
+            });
+        });
+    }
+</script>
+
 </head>
 <body class="">
 <header>
