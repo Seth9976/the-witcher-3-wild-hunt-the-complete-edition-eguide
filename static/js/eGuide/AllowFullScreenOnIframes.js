@@ -1,0 +1,1 @@
+(function($){var allowFullScreenOnIframes=function(){attributesToAdd=["allowfullscreen","mozallowfullscreen","webkitallowfullscreen","oallowfullscreen","msallowfullscreen"];attributesToAddLength=attributesToAdd.length;for(var i=0;i<attributesToAddLength;i++){$("iframe").attr(attributesToAdd[i],true);}};$(document).ready(allowFullScreenOnIframes);})(jQuery);
